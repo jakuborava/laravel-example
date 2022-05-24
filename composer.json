@@ -1,17 +1,17 @@
 {
-    "name": ":vendor_slug/:package_slug",
-    "description": ":package_description",
+    "name": "jakuborava/laravel-example",
+    "description": "Example package for Laravel package training",
     "keywords": [
-        ":vendor_name",
+        "jakuborava",
         "laravel",
-        ":package_slug"
+        "laravel-example"
     ],
-    "homepage": "https://github.com/:vendor_slug/:package_slug",
+    "homepage": "https://github.com/jakuborava/laravel-example",
     "license": "MIT",
     "authors": [
         {
-            "name": ":author_name",
-            "email": "author@domain.com",
+            "name": "Jakub Orava",
+            "email": "orava@orazi.cz",
             "role": "Developer"
         }
     ],
@@ -34,13 +34,13 @@
     },
     "autoload": {
         "psr-4": {
-            "VendorName\\Skeleton\\": "src",
-            "VendorName\\Skeleton\\Database\\Factories\\": "database/factories"
+            "JakubOrava\\LaravelExample\\": "src",
+            "JakubOrava\\LaravelExample\\Database\\Factories\\": "database/factories"
         }
     },
     "autoload-dev": {
         "psr-4": {
-            "VendorName\\Skeleton\\Tests\\": "tests"
+            "JakubOrava\\LaravelExample\\Tests\\": "tests"
         }
     },
     "scripts": {
@@ -49,15 +49,19 @@
         "test-coverage": "vendor/bin/pest --coverage"
     },
     "config": {
-        "sort-packages": true
+        "sort-packages": true,
+        "allow-plugins": {
+            "pestphp/pest-plugin": true,
+            "phpstan/extension-installer": true
+        }
     },
     "extra": {
         "laravel": {
             "providers": [
-                "VendorName\\Skeleton\\SkeletonServiceProvider"
+                "JakubOrava\\LaravelExample\\LaravelExampleServiceProvider"
             ],
             "aliases": {
-                "Skeleton": "VendorName\\Skeleton\\Facades\\Skeleton"
+                "LaravelExample": "JakubOrava\\LaravelExample\\Facades\\LaravelExample"
             }
         }
     },
